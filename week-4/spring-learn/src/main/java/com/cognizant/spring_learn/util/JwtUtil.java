@@ -1,0 +1,30 @@
+package com.cognizant.spring_learn.util;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.stereotype.Component;
+
+import javax.crypto.spec.SecretKeySpec;
+import java.security.Key;
+import java.util.Date;
+import java.nio.charset.StandardCharsets;
+
+@Component
+public class JwtUtil {
+
+    private static final String SECRET_KEY = "mysecretkey";
+
+    public String generateToken(String username) {
+        SecretKeySpec hmacKey = new SecretKeySpec(
+            SECRET_KEY.getBytes(StandardCharsets.UTF_8),
+            SignatureAlgorithm.HS256.getJcaName()
+        );
+
+        return Jwts.builder()
+                .setSubject(username)
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + 3600000))
+                .signWith(SignatureAlgorithm.HS256, hmacKey)
+                .compact();
+    }
+}
