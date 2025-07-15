@@ -1,0 +1,21 @@
+//package com.cognizant.orm_learn.controller;
+//
+//import com.cognizant.orm_learn.model.Employee;
+//import com.cognizant.orm_learn.service.EmployeeService;
+//import org.springframework.beans.factory.annotation.Autowired;
+//
+//
+//@RestController
+//@RequestMapping("/employees")
+//public class EmployeeController {
+//
+//    @Autowired
+//    private EmployeeService employeeService;
+//
+//    @PostMapping
+//    public ResponseEntity<String> createEmployee(@RequestBody Employee employee) {
+//        employeeService.addEmployee(employee);
+//        return ResponseEntity.ok("Employee added");
+//    }
+//}
+

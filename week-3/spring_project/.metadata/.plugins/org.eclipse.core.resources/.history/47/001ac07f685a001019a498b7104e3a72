@@ -1,0 +1,19 @@
+package com.cognizant.orm_learn;
+
+import java.util.logging.Logger;
+import org.junit.jupiter.api.Test;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class OrmLearnApplicationTests {
+
+    private static final Logger LOGGER = (Logger) LoggerFactory.getLogger(OrmLearnApplicationTests.class);
+
+    @Test
+    void contextLoads() {
+        LOGGER.info("Testing context load...");
+    }
+
+	}
+

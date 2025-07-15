@@ -1,0 +1,7 @@
+spring.application.name=spring-learn
+logging.level.com.cognizant.spring_learn=DEBUG
+server.port=8083
+logging.level.com.cognizant.spring_learn=DEBUG
+server.error.whitelabel.enabled=false
+
+logging.level.com.cognizant.spring_learn=DEBUG
